@@ -1,0 +1,8 @@
+$color:red;
+h1{
+    background-color: $color;
+}
+div{
+    $color:blue;
+    color: $color;
+}

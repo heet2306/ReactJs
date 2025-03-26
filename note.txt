@@ -1,0 +1,99 @@
+npm install -g create-react-app
+create-react-app my-app
+cd my-app
+npm start
+-----------------------------------------------------------
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+------------------------------------
+npm (Node Package Manager) npm is a package manager that manages libraries, tools, and packages in the Node.js ecosystem. It helps you install, update, and remove modules.
+
+Key Points:
+
+Installation: You use npm to install packages. When you install a package, it gets installed in your project’s node_modules folder.
+
+Global and Local Installation: You can install packages globally or locally with npm. When you install globally, the package becomes available system-wide. When you install locally, it is specific to your project.
+Examples:
+
+Global installation: npm install -g <package-name>
+Local installation: npm install <package-name>
+You use npm to manage packages, like installing React (npm install react).
+---------------------------------------------------------
+
+npx (Node Package Executor) npx is a tool that comes with npm, but it serves a slightly different purpose. The main function of npx is to temporarily execute a package without having to install it first.
+
+Key Points:
+
+Temporary Execution: npx is used to run any package directly without installing it globally or locally.
+
+Automatic Package Download: If the package you want to run is not installed on your system, npx will automatically download and run it.
+
+
+One-time Use: You use npx to run a package for a one-time task, like creating a React app or running a quick test of a tool.
+Examples:
+
+npx create-react-app my-app: This command temporarily runs the create-react-app tool to create a new React app without installing it globally.
+npx degit <repo-url>: This command is used to directly download a GitHub repository.
+-----------------------------------------------------------------------
+
+It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+---------------------------------------------------------------------
+What is Props ?
+In React, props (short for "properties") are a way of passing data from a parent component to a child component. They allow components to be dynamic and reusable by making them configurable through input data. Props are read-only and cannot be modified by the child component. They are passed to a component in a manner similar to HTML attributes.
+
+How Props Work:
+Passing Props: You pass props to a child component by including them as attributes in the JSX of the parent component.
+
+Accessing Props: In the child component, props are accessed via props object. You can use the values from the props in the JSX or logic of the child component.
+----------------------------------------------------------------------------------
+What is Scss ?
+In the context of React, SCSS (Sassy CSS) is a preprocessor scripting language that extends CSS (Cascading Style Sheets) and provides features like variables, nesting, mixins, and more. SCSS allows you to write cleaner, more maintainable styles for React components, and it is fully compatible with CSS, meaning it ultimately gets compiled into plain CSS which browsers can understand.
+
+SCSS in React
+In React, SCSS is used to style components with the added benefits of SCSS syntax. By using SCSS, you can:
+
+Use variables for colors, fonts, spacing, etc.
+
+Take advantage of nesting to organize your CSS in a more hierarchical way.
+
+Create mixins to reuse chunks of styles.
+
+Use functions and mathematical operations to make dynamic calculations for styles.
+
+Install Sass:-npm install sass
+
+-----------------------------------------------------------------------------------------
+What Is Routing ?
+
+Routing in web development refers to mapping URLs to specific content or views within a web application. It allows users to navigate between different pages or sections without reloading the entire page, especially in Single Page Applications (SPAs).
+
+Key Points:
+Client-Side Routing: Handles navigation within the app without refreshing the page.
+
+Server-Side Routing: Requests a new page from the server on each navigation.
+
+React Router: A popular library for managing client-side routing in React apps.
+
+BrowserRouter: Wraps the app to enable routing.
+
+Route: Defines paths and the components to display.
+
+Link: Creates navigation links between pages.
+
+Dynamic Routing: Allows for URL parameters (e.g., /user/:id).
+
+Programmatic Navigation: Use useNavigate to navigate programmatically.
+
+In short, routing controls how users interact with different parts of an app by changing the URL and dynamically rendering the appropriate content without a full page reload.
+
+for install :- npm install react-router-dom 
+
+
+
+
+
+
+
