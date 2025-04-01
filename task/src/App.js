@@ -1,9 +1,10 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
-
+import img from './Images/img.webp'
+import {add} from './math'
 const App = () => {
   return (
     <Router>
@@ -12,10 +13,10 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
@@ -26,7 +27,11 @@ const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <img src={img} />
+
+      <h1>Sum :{add(5,3)} </h1>
     </Router>
+
   );
 };
 

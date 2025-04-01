@@ -92,6 +92,111 @@ In short, routing controls how users interact with different parts of an app by 
 for install :- npm install react-router-dom 
 
 
+------------------------------------------------------------------------------------------
+How To use JavaScript in React 
+
+1. Using JavaScript Expressions in JSX
+In JSX, you can embed JavaScript expressions inside curly braces {}.
+
+ig.
+function App() {
+  const name = "Alice";
+  return <h1>Hello, {name}!</h1>; // This will display "Hello, Alice!"
+}
+
+export default App;
+Here, {name} is a JavaScript expression embedded inside JSX, and it outputs the value of the name variable.
+
+2. Using JavaScript Function
+You can define and call JavaScript functions in React components.
+
+ig.
+function greet() {
+  return "Good Morning!";
+}
+
+function App() {
+  return <h1>{greet()}</h1>; // Calls the greet function and displays the returned value
+}
+
+export default App;
+In this example, the greet function returns a string, and it's called inside JSX to render the message.
+
+3. Using Inline JavaScript in Event Handlers
+You can write inline JavaScript functions directly inside event handlers like onClick, onChange, etc.
+
+ig.
+function App() {
+  return <button onClick={() => alert("Button clicked!")}>Click Me</button>;
+}
+
+export default App;
+Here, the inline function () => alert("Button clicked!") is triggered when the button is clicked.
+
+4. Using JavaScript Variables and Objects
+You can use JavaScript variables and objects in JSX to display dynamic data.
+
+ig.
+function App() {
+  const user = { name: "John", age: 25 };
+  return <h1>{user.name} is {user.age} years old.</h1>; // Displays "John is 25 years old."
+}
+
+export default App;
+In this example, we are accessing the properties of an object user directly inside JSX.
+
+5. Using JavaScript Inside useEffect Hook
+The useEffect hook allows you to perform side effects like fetching data, manipulating DOM, or running code after render.
+
+ig.
+import { useState, useEffect } from "react";
+
+function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // JavaScript inside useEffect to fetch data
+    fetch("https://api.example.com/data")
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.log(error));
+  }, []); // The empty dependency array ensures this runs once on component mount
+
+  return (
+    <div>
+      <h1>Fetched Data:</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+
+export default App;
+Here, useEffect is used to fetch data when the component mounts, and the data is displayed dynamically.
+
+6. Using External JavaScript File
+You can import and use external JavaScript files in your React component.
+
+Step 1: Create an External File
+Create a file utils.js:
+
+ig.
+// utils.js
+export function greet() {
+  return "Hello from External JavaScript!";
+}
+Step 2: Import and Use in React Component
+
+
+import React from "react";
+import { greet } from "./utils"; // Import the greet function
+
+function App() {
+  return <h1>{greet()}</h1>; // Calls the function from the external file
+}
+
+export default App;
+Here, greet() is imported from an external JavaScript file (utils.js) and used inside the React component.
+
 
 
 
