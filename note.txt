@@ -197,8 +197,56 @@ function App() {
 export default App;
 Here, greet() is imported from an external JavaScript file (utils.js) and used inside the React component.
 
+--------------------------------------------------------------------------------------------------
 
+What is State ?
 
+state is an object that holds the data or properties of a component that can change over time. State allows components to manage dynamic data and re-render when that data changes. When the state of a component changes, React will re-render the component and any of its children that depend on that state.
 
+----------------------------------------------------------------------------------
+
+What is Hooks ?
+
+React Hooks allow functional components to manage state, side effects, and more, without the need for class components. Here are the key hooks:
+
+useState:
+
+Allows you to add state to functional components.
+
+Syntax: const [state, setState] = useState(initialValue);
+
+Example: Handles simple state like a counter.
+
+useEffect:
+
+Handles side effects like fetching data, timers, or subscriptions in functional components.
+
+Syntax: useEffect(() => { /* effect logic */ }, [dependencies]);
+
+Example: Fetches data once the component mounts.
+
+useContext:
+
+Lets you consume context values without needing Context.Consumer components.
+
+Syntax: const value = useContext(MyContext);
+
+Example: Accesses global state like themes or authentication.
+
+useRef:
+
+Provides a way to persist values across renders or reference DOM elements.
+
+Syntax: const ref = useRef(initialValue);
+
+Example: Focuses an input element.
+
+useReducer:
+
+A more advanced version of useState for managing complex state logic, similar to Redux.
+
+Syntax: const [state, dispatch] = useReducer(reducer, initialState);
+
+Example: Manages state changes based on actions.
 
 
