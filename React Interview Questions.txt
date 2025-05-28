@@ -1,0 +1,115 @@
+React Interview Questions
+
+What is React?
+
+Briefly explain React as a JavaScript library for building user interfaces, focusing on how it uses a component-based architecture.
+
+What are components in React?
+
+Describe components, how they can be functional or class-based, and how they help create reusable UI elements.
+
+What is JSX?
+
+JSX is a syntax extension for JavaScript. It looks similar to HTML but is actually JavaScript. You can describe how React components use JSX to describe the UI structure.
+
+What are props and state in React?
+
+Explain the difference between props (input to a component) and state (data that changes within a component).
+
+What are functional and class components?
+
+Describe the difference: Class components are ES6 classes with a render method and can have state, while functional components are simpler, stateless (before hooks), and just return JSX.
+
+What are hooks in React?
+
+Introduce React Hooks (like useState, useEffect, useContext, etc.) and explain how they allow functional components to use state and lifecycle methods.
+
+What is the Virtual DOM?
+
+Explain the concept of the Virtual DOM and how React uses it to optimize updates to the real DOM by comparing it with a "virtual" version before applying changes.
+
+What is the difference between controlled and uncontrolled components?
+
+Controlled components have their value controlled by React state, whereas uncontrolled components manage their own state internally, typically using refs.
+
+What is the context API in React?
+
+Discuss the Context API and how it allows you to share values between components without explicitly passing props at every level.
+
+What is React Router?
+
+React Router is a library for handling routing in a React app. You can explain how it enables navigation between different views in a single-page application.
+
+Redux Interview Questions
+
+What is Redux?
+
+Redux is a state management library for JavaScript apps, mainly used with React. It helps manage the global state of an application in a predictable way.
+
+What are the core principles of Redux?
+
+Explain the three core principles:
+
+Single source of truth (store).
+
+State is read-only (you can only change the state by dispatching actions).
+
+Changes are made with pure functions (reducers).
+
+What is an action in Redux?
+
+An action is a plain JavaScript object that describes an event that has occurred. It must have a type property and can optionally include a payload.
+
+What is a reducer in Redux?
+
+A reducer is a pure function that specifies how the application's state changes in response to an action. It takes the current state and an action as arguments and returns the new state.
+
+What is the store in Redux?
+
+The store holds the application’s state and provides methods like dispatch, getState, and subscribe for interacting with the state.
+
+What is the difference between actions and action creators?
+
+Actions are plain objects with a type property, while action creators are functions that return actions.
+
+What is middleware in Redux?
+
+Middleware provides a way to extend Redux’s capabilities. Commonly used middleware like redux-thunk or redux-saga helps in handling async actions.
+
+What is redux-thunk?
+
+Redux Thunk is a middleware that allows you to write action creators that return a function (instead of an action). This is useful for handling asynchronous operations (e.g., API calls).
+
+What is the difference between local component state and Redux state?
+
+Local state is specific to a single component, while Redux state is global and accessible across the entire app.
+
+How does React-Redux connect work?
+
+connect is a higher-order component that connects React components to the Redux store. It allows components to subscribe to store updates and dispatch actions.
+
+What is the useSelector and useDispatch hooks in React-Redux?
+
+useSelector is used to extract data from the Redux store, and useDispatch is used to dispatch actions from functional components. These are part of the React-Redux hooks API.
+
+Explain Redux DevTools.
+
+Redux DevTools is a browser extension that helps you inspect every action, state change, and allows time travel debugging.
+
+What is the purpose of combineReducers in Redux?
+
+combineReducers helps in organizing reducers when the app grows by splitting the state into smaller pieces, each managed by its own reducer.
+
+What is the flow of data in Redux?
+
+The flow is:
+
+Dispatch an action.
+
+Reducers update the state based on the action.
+
+The store gets updated, and components connected to the store are re-rendered.
+
+How do you handle asynchronous actions in Redux?
+
+Through middleware like redux-thunk or redux-saga, which enable handling async operations and dispatching actions based on the results.
